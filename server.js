@@ -1,4 +1,5 @@
-const PORT = process.env.PORT || 443;
+const PORT = process.env.PORT || 3001;
+const HOST = '0.0.0.0';
 const fs = require('fs');
 const path = require('path');
 
@@ -72,6 +73,6 @@ app.delete('/api/notes/:id', (req, res) => {
     res.json(true);
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, HOST, () => {
     console.log(`API server now on port ${PORT}!`);
 });
